@@ -1,7 +1,7 @@
 AnonBlog::Application.routes.draw do
  
 # match 'post/index' => 'post#index'
-resources :post, :user
+resources :posts, :users
 root :to => 'post#index'
 
 
