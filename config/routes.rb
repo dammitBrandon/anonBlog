@@ -1,4 +1,9 @@
 AnonBlog::Application.routes.draw do
+ 
+resources :posts, :users
+root :to => 'post#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
