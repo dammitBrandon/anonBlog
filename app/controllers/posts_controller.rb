@@ -6,12 +6,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(body: params[:post][:body], title: params[:post][:title])
-    @post.save
-
-    if @post.errors?
-      got back to form
+    
+    if @post.save
+     # got back to form
     else
-      go to the new post
+     # go to the new post
     end
   end
 end
