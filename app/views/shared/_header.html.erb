@@ -1,0 +1,11 @@
+<header>
+  <h1>AnonBlog</h1>
+  <% if session[:id] %>
+    <%= link_to('Recent Posts', posts_path) %>
+    <%= link_to('Profile', user_path) %>
+    <%= link_to('New Post', new_post_path) %>
+    logout 
+  <% else %>
+    logout
+  <% end %>
+</header>

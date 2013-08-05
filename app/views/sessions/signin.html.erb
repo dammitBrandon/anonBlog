@@ -1,0 +1,7 @@
+this will be the signin form
+
+<%= form_for(@user) do |f| %>
+  Username: <%= f.text_field :username %>
+  Password: <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>
