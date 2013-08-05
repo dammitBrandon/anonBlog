@@ -1,8 +1,10 @@
 AnonBlog::Application.routes.draw do
  
 # match 'post/index' => 'post#index'
-resources :post
+resources :post, :user
 root :to => 'post#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
