@@ -1,0 +1,9 @@
+(signin form)
+
+<%= flash[:notice] %>
+
+<%= form_for(:user, :url => signin_url) do |f| %>
+  Username: <%= f.text_field :username %>
+  Password: <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>

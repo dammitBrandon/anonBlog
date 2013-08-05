@@ -2,8 +2,11 @@ AnonBlog::Application.routes.draw do
  
 resources :posts, :users
 match '/signup', to: 'users#new'
-match '/signin', to: 'sessions#new'
-match '/signout', to: 'sessions#destroy', via: :delete
+
+get '/signin', to: 'sessions#new'
+post '/signin', to: 'sessions#create'
+post '/signout', to: 'sessions#destroy'
+
 root :to => 'post#index'
 
 

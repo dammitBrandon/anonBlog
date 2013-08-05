@@ -1,3 +1,5 @@
-Welcome <%= @user.username %>
+User Profile For: <%= @user.username %>
 <br>
-<%= link_to('Create a New Post', new_post_path) %>
+<% if session[:id] %>
+  <%= link_to('Create a New Post', new_post_path) %>
+<% end %>

@@ -4,8 +4,10 @@
     <%= link_to('Recent Posts', posts_path) %>
     <%= link_to('Profile', user_path) %>
     <%= link_to('New Post', new_post_path) %>
-    logout 
+    <%= form_for(:sessions, url: signout_path) do |f| %>
+      <%= f.submit %>
+    <% end %>
   <% else %>
-    logout
+    <%= link_to('Sign In', signin_path) %>
   <% end %>
 </header>
